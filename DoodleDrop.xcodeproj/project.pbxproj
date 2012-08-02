@@ -122,7 +122,10 @@
 		910DC24915CA9E360073C0B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 910DC24815CA9E360073C0B0 /* main.m */; };
 		910DC24C15CA9E360073C0B0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 910DC24B15CA9E360073C0B0 /* AppDelegate.m */; };
 		910DC24F15CA9E360073C0B0 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 910DC24E15CA9E360073C0B0 /* RootViewController.m */; };
-		910DC25215CA9E360073C0B0 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 910DC25115CA9E360073C0B0 /* HelloWorldLayer.m */; };
+		910DC25B15CA9EC90073C0B0 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 910DC25A15CA9EC90073C0B0 /* GameScene.m */; };
+		91C69CDF15CAAE5B005FD323 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91C69CDE15CAAE5B005FD323 /* CoreMotion.framework */; };
+		91F0E51615CAD33300828A87 /* alien.png in Resources */ = {isa = PBXBuildFile; fileRef = 91F0E51515CAD33300828A87 /* alien.png */; };
+		91FF22F015CAD6D5000EFDB5 /* spider.png in Resources */ = {isa = PBXBuildFile; fileRef = 91FF22EF15CAD6D5000EFDB5 /* spider.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -360,9 +363,17 @@
 		910DC24B15CA9E360073C0B0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		910DC24D15CA9E360073C0B0 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		910DC24E15CA9E360073C0B0 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
-		910DC25015CA9E360073C0B0 /* HelloWorldLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloWorldLayer.h; sourceTree = "<group>"; };
-		910DC25115CA9E360073C0B0 /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
 		910DC25315CA9E360073C0B0 /* GameConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameConfig.h; sourceTree = "<group>"; };
+		910DC25915CA9EC90073C0B0 /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
+		910DC25A15CA9EC90073C0B0 /* GameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
+		91C69CDE15CAAE5B005FD323 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		91F0E51515CAD33300828A87 /* alien.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alien.png; sourceTree = "<group>"; };
+		91FF22EF15CAD6D5000EFDB5 /* spider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spider.png; sourceTree = "<group>"; };
+		91FF22F115CADDA0000EFDB5 /* alien-sfx.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "alien-sfx.caf"; sourceTree = "<group>"; };
+		91FF22F215CADDA0000EFDB5 /* bitmapfont.fnt */ = {isa = PBXFileReference; lastKnownFileType = text; path = bitmapfont.fnt; sourceTree = "<group>"; };
+		91FF22F315CADDA0000EFDB5 /* bitmapfont.hiero */ = {isa = PBXFileReference; lastKnownFileType = text; path = bitmapfont.hiero; sourceTree = "<group>"; };
+		91FF22F415CADDA0000EFDB5 /* bitmapfont.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bitmapfont.png; sourceTree = "<group>"; };
+		91FF22F515CADDA0000EFDB5 /* blues.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = blues.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -370,6 +381,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91C69CDF15CAAE5B005FD323 /* CoreMotion.framework in Frameworks */,
 				910DC0E615CA9E330073C0B0 /* QuartzCore.framework in Frameworks */,
 				910DC0E815CA9E330073C0B0 /* OpenGLES.framework in Frameworks */,
 				910DC0EA15CA9E330073C0B0 /* OpenAL.framework in Frameworks */,
@@ -404,6 +416,7 @@
 		910DC0E415CA9E330073C0B0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				91C69CDE15CAAE5B005FD323 /* CoreMotion.framework */,
 				910DC0E515CA9E330073C0B0 /* QuartzCore.framework */,
 				910DC0E715CA9E330073C0B0 /* OpenGLES.framework */,
 				910DC0E915CA9E330073C0B0 /* OpenAL.framework */,
@@ -421,10 +434,10 @@
 			children = (
 				910DC24A15CA9E360073C0B0 /* AppDelegate.h */,
 				910DC24B15CA9E360073C0B0 /* AppDelegate.m */,
+				910DC25915CA9EC90073C0B0 /* GameScene.h */,
+				910DC25A15CA9EC90073C0B0 /* GameScene.m */,
 				910DC24D15CA9E360073C0B0 /* RootViewController.h */,
 				910DC24E15CA9E360073C0B0 /* RootViewController.m */,
-				910DC25015CA9E360073C0B0 /* HelloWorldLayer.h */,
-				910DC25115CA9E360073C0B0 /* HelloWorldLayer.m */,
 				910DC25315CA9E360073C0B0 /* GameConfig.h */,
 				910DC0F615CA9E330073C0B0 /* Resources */,
 				910DC10A15CA9E330073C0B0 /* libs */,
@@ -436,7 +449,14 @@
 		910DC0F615CA9E330073C0B0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				91FF22EF15CAD6D5000EFDB5 /* spider.png */,
+				91F0E51515CAD33300828A87 /* alien.png */,
 				910DC0F715CA9E330073C0B0 /* Default.png */,
+				91FF22F115CADDA0000EFDB5 /* alien-sfx.caf */,
+				91FF22F215CADDA0000EFDB5 /* bitmapfont.fnt */,
+				91FF22F315CADDA0000EFDB5 /* bitmapfont.hiero */,
+				91FF22F415CADDA0000EFDB5 /* bitmapfont.png */,
+				91FF22F515CADDA0000EFDB5 /* blues.mp3 */,
 				910DC0F915CA9E330073C0B0 /* fps_images.png */,
 				910DC0FB15CA9E330073C0B0 /* Icon-72.png */,
 				910DC0FD15CA9E330073C0B0 /* Icon-Small-50.png */,
@@ -822,6 +842,8 @@
 				910DC10415CA9E330073C0B0 /* Icon.png in Resources */,
 				910DC10615CA9E330073C0B0 /* Icon@2x.png in Resources */,
 				910DC10915CA9E330073C0B0 /* iTunesArtwork in Resources */,
+				91F0E51615CAD33300828A87 /* alien.png in Resources */,
+				91FF22F015CAD6D5000EFDB5 /* spider.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -930,7 +952,7 @@
 				910DC24915CA9E360073C0B0 /* main.m in Sources */,
 				910DC24C15CA9E360073C0B0 /* AppDelegate.m in Sources */,
 				910DC24F15CA9E360073C0B0 /* RootViewController.m in Sources */,
-				910DC25215CA9E360073C0B0 /* HelloWorldLayer.m in Sources */,
+				910DC25B15CA9EC90073C0B0 /* GameScene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -983,6 +1005,7 @@
 				GCC_PREFIX_HEADER = DoodleDrop/Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				INFOPLIST_FILE = DoodleDrop/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -998,6 +1021,7 @@
 				GCC_PREFIX_HEADER = DoodleDrop/Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				INFOPLIST_FILE = DoodleDrop/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALIDATE_PRODUCT = YES;
@@ -1024,6 +1048,7 @@
 				910DC25815CA9E360073C0B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
